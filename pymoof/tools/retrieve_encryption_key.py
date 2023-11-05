@@ -9,8 +9,8 @@ def query(username, password):
     result = retrieve_bikes.query(username, password)
     print("Got bikes: %s", result["data"]["bikeDetails"])
     # Only get the first bike's encryption key
-    encryption_key = result["data"]["bikeDetails"][0]["key"]["encryptionKey"]
-    user_key_id = result["data"]["bikeDetails"][0]["key"]["userKeyId"]
+    encryption_key = result[0]["key"]["encryptionKey"]
+    user_key_id = result[0]["key"]["userKeyId"]
     return encryption_key, user_key_id
 
 if __name__ == "__main__":
