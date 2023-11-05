@@ -4,7 +4,7 @@ import getpass
 import requests
 
 
-def query(username=None, password=None):
+def query(username, password):
     API_URL = "https://my.vanmoof.com/api/v8"
 
     # This api key is distributed by the official Vanmoof
