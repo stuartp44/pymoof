@@ -10,7 +10,7 @@ from pymoof.tools import retrieve_encryption_key
 
 async def example():
     print("Getting key from vanmoof servers")
-    key, user_key_id = retrieve_encryption_key.query()
+    key, user_key_id = retrieve_encryption_key.query(username="username", password="password")
 
     print("Discovering nearby vanmoof bikes")
     device = await discover_bike.query()
