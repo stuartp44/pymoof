@@ -37,4 +37,4 @@ def query(username, password):
     )
     result = result.json()
 
-    return result["bikeDetails"]
+    return result["data"]["bikeDetails"]
