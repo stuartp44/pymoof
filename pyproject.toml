@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pymoof"
-version = "0.0.6"
+version = "0.0.7"
 description = "Connect to your Vanomof S3/X3 bike"
 authors = ["Henri Bai <quantsini@gmail.com>"]
 license = "MIT"
@@ -14,10 +14,10 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-requests = "^2.27.1"
-bleak = "^0.14.2"
-cryptography = "^36.0.1"
+python = ">3.7"
+requests = ">2.27.1"
+bleak = ">0.14.2"
+cryptography = ">36.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
