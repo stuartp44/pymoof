@@ -5,6 +5,7 @@ import requests
 
 
 def query(username, password):
+    print("Getting key from vanmoof servers")
     API_URL = "https://my.vanmoof.com/api/v8"
 
     # This api key is distributed by the official Vanmoof
