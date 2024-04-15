@@ -7,7 +7,7 @@ from pymoof.tools import retrieve_bikes
 
 def query(username, password):
     result = retrieve_bikes.query(username, password)
-    print(f"Got bikes: {result['data']['bikeDetails']}")
+    print("Got bikes:", result)
     # Only get the first bike's encryption key
     encryption_key = result[0]["key"]["encryptionKey"]
     user_key_id = result[0]["key"]["userKeyId"]
