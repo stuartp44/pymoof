@@ -1,9 +1,5 @@
 import asyncio
 
-from bleak import BleakScanner
-
-scanner = BleakScanner
-
 async def query(scanner):
     devices = await scanner.discover(
         service_uuids=[
