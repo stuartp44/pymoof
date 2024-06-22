@@ -12,7 +12,7 @@ async def example():
     key, user_key_id = retrieve_encryption_key.query(username="username", password="password")
 
     print("Discovering nearby vanmoof bikes")
-    device = await discover_bike.query(Bleak.Scanner)
+    device = await discover_bike.query(bleak.Scanner)
 
     print("Doing example commands")
     async with bleak.BleakClient(device) as bleak_client:
