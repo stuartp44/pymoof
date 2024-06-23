@@ -12,10 +12,10 @@ async def example():
     key, user_key_id = retrieve_encryption_key.query(username="username", password="password")
 
     print("Discovering nearby vanmoof bikes")
-    device = await discover_bike.query(bleak.Scanner)
+    devices = await discover_bike.query(bleak.Scanner)
 
     print("Doing example commands")
-    async with bleak.BleakClient(device) as bleak_client:
+    async with bleak.BleakClient(devices[0]) as bleak_client:
         client = SX3Client(bleak_client, key, user_key_id)
 
         print("Frame Number:", await client.get_frame_number())
